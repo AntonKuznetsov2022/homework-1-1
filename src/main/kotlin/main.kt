@@ -1,8 +1,9 @@
 fun main () {
-    val transferAmount: Double = 4670.50
+    val transferAmount: Double = 4170.50
     val commission: Double = 0.0075
     var ammount: Double = 0.0
 
-    ammount = transferAmount * commission
-    if (ammount<35) println("Комиссия равна 35 руб.") else println("Комиcсия равна: ${String.format("%.2f", ammount)} руб.")
-}
+    if (transferAmount * commission<35) ammount = 35.0 else ammount = transferAmount * commission
+
+    println("Комиcсия равна: ${String.format("%.2f", ammount)} руб.")
+}cd
